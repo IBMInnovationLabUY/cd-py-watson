@@ -1,6 +1,8 @@
 # Asistentes virtuales y reconocimiento de imágenes - Cloud & Data Asunción 2019
 
-[foto watson]
+<p align="center">
+  <img src="imagenes/watson.png" width="150" length="200">
+</p>
 
 ## Itinerario
 
