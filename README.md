@@ -1,7 +1,7 @@
 # Asistentes virtuales y reconocimiento de imágenes - Cloud & Data Asunción 2019
 
 <p align="center">
-  <img src="imagenes/watson.png" width="150" length="200">
+  <img src="recursos/watson.png" width="150" length="200">
 </p>
 
 ## Itinerario
@@ -46,29 +46,17 @@ En este hands-on importaremos un asistente virtual ya desarrollado, que permite 
 
 Los pasos a seguir son los siguientes:
 
-* 1. Ingresar a [IBM Cloud](https://cloud.ibm.com/login).
-
-* 2. Hacer clic en la pestaña **Catalog**, que se encuentra en la zona superior de la pantalla.
-
-* 3. Ingresar a la sección *AI* y seleccionar el servicio **Watson Assistant**.
-
-* 4. Hacer clic en el botón **Create**, que se encuentra en la zona derecha de la pantalla. Esto creará por defecto una instancia con el plan gratuito de Watson Assistant.
-
-* 5. Hacer clic en el botón **Launch Watson Assistant**.
-
+1. Ingresar a [IBM Cloud](https://cloud.ibm.com/login).
+2. Hacer clic en la pestaña **Catalog**, que se encuentra en la zona superior de la pantalla.
+3. Ingresar a la sección *AI* y seleccionar el servicio **Watson Assistant**.
+4. Hacer clic en el botón **Create**, que se encuentra en la zona derecha de la pantalla. Esto creará por defecto una instancia con el plan gratuito de Watson Assistant.
+5. Hacer clic en el botón **Launch Watson Assistant**.
 6. Entrar a la pestaña *Skills*, que se encuentra en la zona izquierda de la pantalla, y hacer clic en el botón **Create skill**.
 7. Seleccionar la opción **Dialog skill** y hacer clic en *Next*.
 8. Ingresar a la pestaña *Import skill*	y presionar el botón **Choose JSON file**. El archivo que se debe seleccionar es **c&d_py_skill.json**, que se encuentra dentro de la carpeta *code/assistant* del repositorio.
-7. Ir a la sección de *Intenciones* y agregar dos intenciones: - reservar
-							       - check-in
-8. Ir a la sección *Entidades* y agregar dos entidades: - personas
-						        - países
-9. Ir a la sección *Diálogo* y agregar nodos: - Bienvenida
-						* Variable de contexto para el nombre
-					      - Realizar reserva
-						* Dar opciones
-					      - Realizar check-in
-10. Probar el asistente 
+9. Agregar en la pestaña *Intents* una intención bajo el nombre *estado* con 5 ejemplos, que va a representar la intención del usuario en el momento en que consulte el estado de su vuelo.
+10. Agregar en la pestaña *Dialog* un nuevo nodo con el nombre *Consultar estado*. Este nodo se debe activar cuando el usuario quiera conocer su estado, por lo que le asignaremos la intención *estado*. Para esto último debe seleccionar la intención en la sección *If assistant recognizes*. A este nodo se le pueden asignar diferentes respuestas y que éstas sean seleccionadas de forma aleatoria. 
+11. Probar el asistente haciendo clic en el botón **Try it**, que se encuentra en la esquina superior derecha. 
 
 ## Watson Visual Recognition
 
