@@ -60,6 +60,22 @@ Los pasos a seguir son los siguientes:
 
 ## Watson Visual Recognition
 
+Watson Visual Recognition es el servicio que ofrece IBM Cloud para el desarrollo de modelos de machine learning para clasificación y detección de objetos en imágenes. 
+
+Además de permitirle al usuario crear sus propios modelos para casos de uso particulares, el servicio también ofrece la posibilidad de utilizar modelos que ya están entrenados en la nube. 
+
+Estos modelos pre-entrenados son:
+
+* General
+* Comida
+* Explícito
+
+En este hands-on entrenaremos un modelo que permite reconocer partes de vehículos que se encuentran dañadas.\
+El modelo podrá reconocer:
+
+* Paragolpes rotos
+* Vidrio frontal roto
+
 Pasos:
 
 1. Ir a catálogo
