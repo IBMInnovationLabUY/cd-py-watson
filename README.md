@@ -7,7 +7,7 @@
 ## Itinerario
 
 * Bienvenida
-* Setup
+* Prerrequisitos
 * Watson Assistant
 * Watson Visual Recognition
 * Integración entre los servicios
@@ -25,9 +25,26 @@ En el caso de Watson Visual Recognition, se entrenará un modelo para reconocimi
 
 Para terminar el hands-on se mostrará un aplicación que integra los servicios anteriores.
 
-## Setup
+## Prerrequisitos 
+
+
+### 1 Crear una cuenta en IBM Cloud
+
+Es necesario tener creada una cuenta de IBM Cloud para poder realizar el hands-on.
+
+Si aún no tiene cuenta de IBM Cloud, haga clic [aqui](https://ibm.biz/CD-PY19) para crear una. 
+
+### 2 Visual Studio Code
+
+Puede descargarlo fácilmente desde la [web oficial](https://code.visualstudio.com/)
+
+### 3 Descargar este repositorio
+
+Para descargar el repositorio haga clic en el botón **Clone or download**, que se encuentra en la parte superior derecha de la pantalla dentro GitHub.
 
 ## Watson Assistant
+
+
 
 Pasos:
 
