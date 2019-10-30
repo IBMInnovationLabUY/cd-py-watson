@@ -17,7 +17,11 @@
 
 Durante este hands-on estaremos conociendo dos de los principales servicios que ofrece Watson en IBM Cloud. Estos servicios son: Watson Assistant, que permite desarrollar asistentes virtuales de forma fácil y rápida, y Watson Visual Recognition, que ofrece la posibilidad de entrenar modelos de clasificación y detección de objetos en imágenes como también utilizar modelos pre-entrenados.
 
-En primera instancia se realizará un práctico para cada servicio con el objetivo de entender cómo funcionan y también conocer los conceptos básicos que estos involucran. Dentro de Watson Assistant construiremos un asistente virtual para vuelos que permitirá reservar pasajes y realizar el check-in para un vuelo específico. En el caso de Watson Visual Recognition, se entrenará un modelo para reconocimiento de partes dañadas en vehículos a través de imágenes y luego, mediante la interfaz gráfica de IBM Cloud como también mediante código, se realizarán consultas al modelo entrenado.
+En primera instancia se realizará un práctico para cada servicio con el objetivo de entender cómo funcionan y también conocer los conceptos básicos que estos involucran. 
+
+Dentro de Watson Assistant construiremos un asistente virtual para vuelos que permitirá reservar pasajes y realizar el check-in para un vuelo específico. 
+
+En el caso de Watson Visual Recognition, se entrenará un modelo para reconocimiento de partes dañadas en vehículos a través de imágenes y luego, mediante la interfaz gráfica de IBM Cloud como también mediante código, se realizarán consultas al modelo entrenado.
 
 Para terminar el hands-on se mostrará un aplicación que integra los servicios anteriores.
 
