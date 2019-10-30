@@ -34,26 +34,26 @@ Es necesario tener creada una cuenta de IBM Cloud para poder realizar el hands-o
 
 Si aún no tiene cuenta de IBM Cloud, haga clic [aqui](https://ibm.biz/CD-PY19) para crear una. 
 
-### 2 Visual Studio Code
-
-Puede descargarlo fácilmente desde la [web oficial](https://code.visualstudio.com/)
-
-### 3 Descargar este repositorio
+### 2 Descargar este repositorio
 
 Para descargar el repositorio haga clic en el botón **Clone or download**, que se encuentra en la parte superior derecha de la pantalla dentro GitHub.
 
 ## Watson Assistant
 
+Watson Assistant es el servicio que ofrece IBM Cloud para el desarrollo de asistentes virtuales. Su interfaz gráfica amigable con el usuario le permite a este construir chatbots fácilmente y de forma rápida.
 
+En este hands-on importaremos un asistente virtual ya desarrollado, que permite reservar pasajes para viajes aéreos. A medida que recorramos la solución entenderemos algunos conceptos básicos sobre asistentes virtuales y luego agregaremos una funcionalidad que permita a los usuarios consultar el estado de su vuelo.
 
-Pasos:
+Los pasos a seguir son los siguientes:
 
-1. Ingresar a IBM Cloud
-2. Ir a catálogo
-3. Ingresar a la sección *AI* y abrir **Watson Assistant**
-4. Crear una instancia free del servicio
-5. Ir a **Launch Watson Assistant**
-6. Entrar a Skills y crear una skill con el nombre **Asistente_vuelos**
+1. Ingresar a [IBM Cloud](https://cloud.ibm.com/login).
+2. Hacer clic en la pestaña **Catalog**, que se encuentra en la zona superior de la pantalla.
+3. Ingresar a la sección *AI* y seleccionar el servicio **Watson Assistant**.
+4. Hacer clic en el botón **Create**, que se encuentra en la zona derecha de la pantalla. Esto creará por defecto una instancia con el plan gratuito de Watson Assistant.
+5. Hacer clic en el botón **Launch Watson Assistant**.
+6. Entrar a la pestaña *Skills*, que se encuentra en la zona izquierda de la pantalla, y hacer clic en el botón **Create skill**.
+7. Seleccionar la opción **Dialog skill** y hacer clic en *Next*.
+8. Ingresar a la pestaña *Import skill*	y presionar el botón **Choose JSON file**. El archivo que se debe seleccionar es **c&d_py_skill.json**, que se encuentra dentro de la carpeta *code/assistant* del repositorio.
 7. Ir a la sección de *Intenciones* y agregar dos intenciones: - reservar
 							       - check-in
 8. Ir a la sección *Entidades* y agregar dos entidades: - personas
