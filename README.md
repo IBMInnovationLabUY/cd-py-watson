@@ -46,11 +46,16 @@ En este hands-on importaremos un asistente virtual ya desarrollado, que permite 
 
 Los pasos a seguir son los siguientes:
 
-1. Ingresar a [IBM Cloud](https://cloud.ibm.com/login).
-2. Hacer clic en la pestaña **Catalog**, que se encuentra en la zona superior de la pantalla.
-3. Ingresar a la sección *AI* y seleccionar el servicio **Watson Assistant**.
-4. Hacer clic en el botón **Create**, que se encuentra en la zona derecha de la pantalla. Esto creará por defecto una instancia con el plan gratuito de Watson Assistant.
-5. Hacer clic en el botón **Launch Watson Assistant**.
+* 1. Ingresar a [IBM Cloud](https://cloud.ibm.com/login).
+
+* 2. Hacer clic en la pestaña **Catalog**, que se encuentra en la zona superior de la pantalla.
+
+* 3. Ingresar a la sección *AI* y seleccionar el servicio **Watson Assistant**.
+
+* 4. Hacer clic en el botón **Create**, que se encuentra en la zona derecha de la pantalla. Esto creará por defecto una instancia con el plan gratuito de Watson Assistant.
+
+* 5. Hacer clic en el botón **Launch Watson Assistant**.
+
 6. Entrar a la pestaña *Skills*, que se encuentra en la zona izquierda de la pantalla, y hacer clic en el botón **Create skill**.
 7. Seleccionar la opción **Dialog skill** y hacer clic en *Next*.
 8. Ingresar a la pestaña *Import skill*	y presionar el botón **Choose JSON file**. El archivo que se debe seleccionar es **c&d_py_skill.json**, que se encuentra dentro de la carpeta *code/assistant* del repositorio.
