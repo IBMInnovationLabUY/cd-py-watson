@@ -76,19 +76,19 @@ El modelo podrá reconocer:
 * Paragolpes rotos
 * Vidrio frontal roto
 
-Pasos:
+Los pasos que se deben seguir para crear este modelo son los siguientes:
 
-1. Ir a catálogo
-2. Ingresar a la sección *AI* y abrir **Visual Recognition**
-3. Crear una instancia free del servicio
-4. Ir a **Create model on Watson Studio**
-5. Crear un modelo de clasificación
-6. Modelo con dos clases: paragolpes y vidrio frontal roto
-7. Negativos: todas las otras imágenes
-8. Entrenar --> Yo ya lo tengo entrenado
-9. Probar modelo nube
-10. Probar modelo con código
-
+1. Ingresar a [IBM Cloud](https://cloud.ibm.com/login).
+2. Hacer clic en la pestaña **Catalog**, que se encuentra en la zona superior de la pantalla.
+3. Ingresar a la sección *AI* y seleccionar el servicio **Visual Recognition**.
+4. Hacer clic en el botón **Create**, que se encuentra en la zona derecha de la pantalla. Esto creará por defecto una instancia con el plan gratuito de Visual Recognition.
+5. Hacer clic en el botón **Create a Custom Model**.
+6. Hacer clic en el botón **Create model**, que se encuentra dentro de *Classify images*. 
+7. Se abrirá una interfaz en la que debemos crear un proyecto para que contenga nuestra instancia del servicio. A este proyecto le debemos asignar un nombre y nuestra instancia de Visual Recognition.
+8. Se abrirá una vista y es aquí donde podremos cargar imágenes para el entrenamiento de nuestro modelo. Le debemos asignar un nombre al modelo en la entrada que se encuentra en la zona superior izquierda.
+9. Hacer clic en el botón **Browse**, que se encuentra en el panel de la derecha. Aquí debemos cargar los tres archivos .zip que se encuentran en *codigo/visual/entrenamiento*. Esta acción nos cargará tres nuevas clases en nuestro modelo, pero debemos borrar la clase vehiculos_sanos_entrenamiento, ya que esas imágenes las utilizaremos para la clase *Negative*. En el proceso de borrado, marcar la opción para que se borren también las fotos.
+10. Desde el panel de la derecha, arrastar *vehiculos_sanos_entrenamiento.zip* a la clase **Negative**.
+11. Ahora que se tienen completas las clases del modelo se debe hacer clic en el botón **Train model**, que se encuentra en la zona superior de la pantalla. El proceso de entrenamiento puede demorar varios minutos.
 
 ## Integración entre los servicios
 
