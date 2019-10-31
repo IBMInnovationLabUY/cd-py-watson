@@ -90,9 +90,3 @@ Los pasos que se deben seguir para crear este modelo son los siguientes:
 10. Desde el panel de la derecha, arrastar *vehiculos_sanos_entrenamiento.zip* a la clase **Negative**.
 11. Ahora que se tienen completas las clases del modelo se debe hacer clic en el botón **Train model**, que se encuentra en la zona superior de la pantalla. El proceso de entrenamiento puede demorar varios minutos.
 12. Dentro de la carpeta *codigo/visual/test* tenemos varias fotos con las que podremos probar nuestro modelo una vez que el proceso de entrenamiento haya finalizado.
-
-## Integración entre los servicios
-
-Pasos:
-
-1. Abrir aplicación **Pipo** y mostrar. (no se si lo uso yo o se lo doy a ellos para que prueben)
