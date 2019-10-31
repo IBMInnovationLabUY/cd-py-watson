@@ -89,6 +89,7 @@ Los pasos que se deben seguir para crear este modelo son los siguientes:
 9. Hacer clic en el botón **Browse**, que se encuentra en el panel de la derecha. Aquí debemos cargar los tres archivos .zip que se encuentran en *codigo/visual/entrenamiento*. Esta acción nos cargará tres nuevas clases en nuestro modelo, pero debemos borrar la clase vehiculos_sanos_entrenamiento, ya que esas imágenes las utilizaremos para la clase *Negative*. En el proceso de borrado, marcar la opción para que se borren también las fotos.
 10. Desde el panel de la derecha, arrastar *vehiculos_sanos_entrenamiento.zip* a la clase **Negative**.
 11. Ahora que se tienen completas las clases del modelo se debe hacer clic en el botón **Train model**, que se encuentra en la zona superior de la pantalla. El proceso de entrenamiento puede demorar varios minutos.
+12. Dentro de la carpeta *codigo/visual/test* tenemos varias fotos con las que podremos probar nuestro modelo una vez que el proceso de entrenamiento haya finalizado.
 
 ## Integración entre los servicios
 

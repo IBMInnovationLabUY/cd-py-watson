@@ -1,0 +1,321 @@
+{
+  "name": "C&D_Paraguay_demo",
+  "intents": [
+    {
+      "intent": "reservar",
+      "examples": [
+        {
+          "text": "quiero hacer una reserva"
+        },
+        {
+          "text": "me gustaría reservar un pasaje"
+        },
+        {
+          "text": "puedo reservar un vuelo?"
+        },
+        {
+          "text": "reservar pasaje"
+        },
+        {
+          "text": "podría hacer una reserva?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "país",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Paraguay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Argentina",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chile",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Uruguay",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Brasil",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "clase",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "executive",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "economy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "business",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "es",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "5bb48442-8bc2-46e5-aaed-c1c4411fd238",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Obtener nombre",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Un gusto $nombre! Te puedo ayudar en la reserva o en el checkeo del estado de un vuelo. ¿Con qué quisieras que te ayude?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bienvenido",
+      "context": {
+        "nombre": "<? input.text ?>"
+      },
+      "conditions": "true",
+      "dialog_node": "node_4_1572473165477"
+    },
+    {
+      "type": "standard",
+      "title": "Obtener clase",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Usted ha reservado un pasaje desde $pais_origen hacia $pais_destino en clase $clase a nombre de $nombre."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1572473971661",
+      "context": {
+        "clase": "<? input.text ?>"
+      },
+      "conditions": "@clase",
+      "dialog_node": "node_10_1572474261624"
+    },
+    {
+      "type": "standard",
+      "title": "Obtener país de destino",
+      "output": {
+        "generic": [
+          {
+            "title": "Excelente! Y en qué clase desea viajar?",
+            "options": [
+              {
+                "label": "Business",
+                "value": {
+                  "input": {
+                    "text": "business"
+                  }
+                }
+              },
+              {
+                "label": "Executive",
+                "value": {
+                  "input": {
+                    "text": "executive"
+                  }
+                }
+              },
+              {
+                "label": "Economy",
+                "value": {
+                  "input": {
+                    "text": "economy"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1572473849649",
+      "context": {
+        "pais_destino": "<? input.text ?>"
+      },
+      "conditions": "@país",
+      "dialog_node": "node_7_1572473971661"
+    },
+    {
+      "type": "standard",
+      "title": "Obtener país de origen",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Y de los países anteriores, cuál será su destino?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1572473504864",
+      "context": {
+        "pais_origen": "<? input.text ?>"
+      },
+      "conditions": "@país",
+      "dialog_node": "node_1_1572473849649"
+    },
+    {
+      "type": "standard",
+      "title": "Reservar vuelo",
+      "output": {
+        "generic": [
+          {
+            "title": "Perfecto! A continuación voy a listar los países en los que operamos. Seleccione el país de origen:",
+            "options": [
+              {
+                "label": "Argentina",
+                "value": {
+                  "input": {
+                    "text": "Argentina"
+                  }
+                }
+              },
+              {
+                "label": "Brasil",
+                "value": {
+                  "input": {
+                    "text": "Brasil"
+                  }
+                }
+              },
+              {
+                "label": "Chile",
+                "value": {
+                  "input": {
+                    "text": "Chile"
+                  }
+                }
+              },
+              {
+                "label": "Paraguay",
+                "value": {
+                  "input": {
+                    "text": "Paraguay"
+                  }
+                }
+              },
+              {
+                "label": "Uruguay",
+                "value": {
+                  "input": {
+                    "text": "Uruguay"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#reservar",
+      "dialog_node": "node_5_1572473504864",
+      "previous_sibling": "Bienvenido"
+    },
+    {
+      "type": "standard",
+      "title": "En otras cosas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "No le he entendido. Intente reformular la consulta."
+              },
+              {
+                "text": "¿Puede expresarse con otras palabras? No le he entendido."
+              },
+              {
+                "text": "No entendí el significado."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "En otras cosas",
+      "previous_sibling": "node_5_1572473504864"
+    },
+    {
+      "type": "standard",
+      "title": "Bienvenido",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hola! Soy el asistente virtual de Watson Airlines. Para comenzar, por favor, indíqueme su nombre."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bienvenido"
+    }
+  ],
+  "workspace_id": "5bb48442-8bc2-46e5-aaed-c1c4411fd238",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "disambiguation": {
+      "prompt": "Querías decir:",
+      "none_of_the_above_prompt": "Ninguna de las anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Querías decir:"
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Training"
+}
